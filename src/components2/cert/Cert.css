@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.headr {
+    background-color: aqua;
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+
+}
+
+.logout {
+    background-color: coral !important;
+}
+
+.logout:hover {
+    background-color: red !important;
+    color: white;
+    
+}
+
+
+/* .cert_nav {
+    position: fixed !important; 
+    float: left !important;
+    background-color: bisque !important;
+    position: fixed !important;
+    top: 15vh !important;
+} */
+/* 
+.bgcolor{
+    background-color: aqua;
+} */

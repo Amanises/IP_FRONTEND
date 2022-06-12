@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.headr {
+    background-color: aqua;
+    width: 10%;
+    /* height:35px; */
+    text-align: center;
+
+}
+
+
+.navb {
+    /* width: 20%; */
+    background-color: rgb(20, 165, 146);
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.navb Link{
+    padding: 4px;
+}
+
+.navb button{
+    background-color: aquamarine;
+    border-radius: 9px;
+    margin: 8px;
+    padding: 4px;
+    width: 70%;
+}
+
+.navb button:hover{
+    background-color: rgb(175, 190, 38);
+}

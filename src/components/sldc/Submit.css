@@ -1,0 +1,8 @@
+.form-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: left;
+    min-height: 100vh;
+}

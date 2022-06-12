@@ -1,0 +1,17 @@
+.table_head th{
+    text-align: center;
+    
+}
+
+.table_body button{
+    /* display: inline; */
+    margin: 5px;
+}
+
+.container p{
+    margin-top: 30px;
+}
+
+.request_btn{
+    margin: 10px;
+}
