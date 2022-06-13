@@ -11,8 +11,32 @@ class Cert2 extends Component {
             cert_user : '',
             location_prop: null,
             logged : false,
+
+            hide_status : false,
+            
         }
-        
+
+        this.sideBar = React.createRef();
+        this.hideBtn = React.createRef();
+
+        this.hideBar = () => {
+            // this.sideBar.current.style.width = "0px";
+            
+            if(!this.state.hide_status){
+                this.sideBar.current.style.visibility = "hidden";
+                this.hideBtn.current.style.marginLeft = "0";
+                this.setState({hide_status:true});
+                document.getElementById('btn_id').innerHTML = "☰ Show Menu"
+            }
+            else{
+                this.sideBar.current.style.visibility = "visible";
+                this.hideBtn.current.style.marginLeft = "220px";
+                // document.getElementById('float_button').marginLeft = "220px"; //this doesn't work with getElementById
+                this.setState({hide_status:false});
+                document.getElementById('btn_id').innerHTML = "☰ Hide Menu"
+            }
+
+        }
     }
 
     
@@ -30,6 +54,7 @@ class Cert2 extends Component {
             this.setState({logged:true});
         }
         //if user.length
+       
     }
 
     logout = () =>{
@@ -52,7 +77,7 @@ class Cert2 extends Component {
                         <p>Welcome User : {this.state.cert_user}</p>
                     </div>
 
-                    <div className="d-flex flex-column flex-shrink-0 p-3 navb cert_nav" >
+                    <div className="d-flex flex-column flex-shrink-0 p-3 navb cert_nav" ref={this.sideBar}>
                         <div className="bgcolor">
 
                         <Link to='req'><button>IP Request's</button></Link>
@@ -60,7 +85,7 @@ class Cert2 extends Component {
                         <button className='logout' onClick={this.logout}>Logout</button>
                         </div>
                     </div>
-
+                    <div className="float-start floatbtn" ref={this.hideBtn} id="float_button"><button id="btn_id" className='btn hide-btn' onClick={this.hideBar} >☰ Hide Menu </button></div><br></br>
                     <Outlet context={this.state.location_prop}/>
                 </div>) || <div> <h1>LOGGED OUT</h1></div>
                         
